@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Simple Drawing Application</title>
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" title="no title" charset="utf-8">
+	<link rel ="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+</head>
+<body class="drawme">
+<div class="container">
+<div class="row">
+<div class="col-md-12 drawing">
+  <div id="button">
+  <input type="button" id="clear" value="clear" class="btn btn-danger btn-lg">
+	<a href="#" tabindex="0" id="saveimg" class="btn btn-lg btn-success" data-toggle="popover" data-trigger="focus"  data-content="Right click on the image and select save image as.">Save</a>
+  </div>
+	<canvas id="onecanvas"	width="600" height="400"></canvas>
+  <div id="cimage">
+  <img id="canvasImg" alt="Right click to save me!">
+    </div>
+    <div class="col-md-3">
+    <button class="toggle-eraser btn btn-primary">Eraser</button>
+     <button class="toggle-pen btn btn-primary">pen</button>
+     <div class="panel panel-info stroke-panel">
+  <div class="panel-heading">Stroke Size</div>
+  <div class="panel-body">
+	<p>
+	<input class="stroke" id="strokesize" name="stroke" type="range" min=2 max=15 value=2 autocomplete="off">
+	</p>
+	<div id="box" class="strokebox"></div>
+  </div>
+</div>
+    </div>
+	<div class="controls">
+		<ul>
+			<li class="red selected"></li>
+			<li class="blue"></li>
+			<li class="yellow"></li>
+		</ul>
+		<button id="revealColorSelect">New Color</button>
+		<div id="colorSelect">
+		<button class="reset btn btn-success ">Reset</button>
+		<button class="closecolor btn btn-danger ">Close</button>
+			<span id="newColor"></span>
+			<div class="sliders">
+				<p>
+					<label for="red">Red</label>
+					<input class="colors" id="red" name="red" type="range" min=0 max=255 value=0 autocomplete="off">
+				</p>
+				<p>
+					<label for="green">Green</label>
+					<input class="colors" id="green" name="green" type="range" min=0 max=255 value=0 autocomplete="off">
+				</p>
+				<p>
+					<label for="blue">Blue</label>
+					<input class="colors" id="blue" name="blue" type="range" min=0 max=255 value=0 autocomplete="off">
+				</p>
+			</div>
+			<div>
+			<button id="addNewColor" class="btn btn-lg">Add Color</button>
+			</div>
+		</div>
+	</div>
+	</div>
+	</div>
+	</div>
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	<script src="js/app.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>
